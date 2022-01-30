@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="view">Class</h1>
+    <script>
+        class jq {
+            constructor(){ // メソッド
+                this.id = "";// プロパティ
+                return this;
+            }
+            $(id){
+                this.id = document.querySelector(id);
+                return this;
+            }
+            html(h){
+                this.id.innerHTML=h;
+                return this;
+            }
+            css(prop, value){
+                this.id.setAttribute("style", prop+":"+ value)
+
+            }
+        }
+        const z = new jq;
+        z.$("#view").html("HTML").css("color", "#ff0000");
+
+    </script>
+    
+</body>
+</html>
